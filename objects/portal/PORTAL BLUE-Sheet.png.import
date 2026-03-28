@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5jyvhfhdepaf"
-path="res://.godot/imported/PORTAL BLUE-Sheet.png-e69f49c43d09b1ff3103020713e2ef3a.ctex"
+path="res://.godot/imported/PORTAL BLUE-Sheet.png-2c3e0e7507cf973edc1f6b84b2e2df5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object/portal/PORTAL BLUE-Sheet.png"
-dest_files=["res://.godot/imported/PORTAL BLUE-Sheet.png-e69f49c43d09b1ff3103020713e2ef3a.ctex"]
+source_file="res://objects/portal/PORTAL BLUE-Sheet.png"
+dest_files=["res://.godot/imported/PORTAL BLUE-Sheet.png-2c3e0e7507cf973edc1f6b84b2e2df5f.ctex"]
 
 [params]
 
