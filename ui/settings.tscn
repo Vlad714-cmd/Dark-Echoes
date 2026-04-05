@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://jorjg1dxruku"]
 
+[ext_resource type="Script" uid="uid://ddm4eddawqgq0" path="res://ui/settings.gd" id="1_7kwmf"]
+
 [node name="settings" type="CanvasLayer" unique_id=167661595]
+script = ExtResource("1_7kwmf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1974778526]
 anchors_preset = 15
@@ -8,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.003921569, 0.003921569, 0.003921569, 0.3137255)
+color = Color(0.1695188, 0.45887226, 0.55857635, 0.3137255)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1492476612]
 anchors_preset = 15
@@ -22,11 +25,26 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=383270085]
+[node name="Settings" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=383270085]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Settings"
 horizontal_alignment = 1
 
-[node name="HScrollBar" type="HScrollBar" parent="HBoxContainer/VBoxContainer" unique_id=1578317007]
+[node name="sound" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1779285855]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "sound"
+horizontal_alignment = 1
+
+[node name="soundBar" type="HScrollBar" parent="HBoxContainer/VBoxContainer" unique_id=1578317007]
+layout_mode = 2
+min_value = -80.0
+max_value = 0.0
+
+[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=319358915]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/soundBar" to="." method="_on_sound_bar_value_changed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

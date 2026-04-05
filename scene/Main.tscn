@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c2bp7b2s6p2wh"]
 
 [ext_resource type="PackedScene" uid="uid://d0jjcj7rew4ub" path="res://scene/background/bg.tscn" id="1_3a0b2"]
+[ext_resource type="Script" uid="uid://c6ur7jmga8pes" path="res://scene/main.gd" id="1_x4yfu"]
 [ext_resource type="Texture2D" uid="uid://cenw6w1k2y7oq" path="res://tileset/cavesofgallet.png" id="2_4lfia"]
 [ext_resource type="Texture2D" uid="uid://q7hjm8wkvms5" path="res://tileset/tilesetcave.png" id="3_gtqao"]
 [ext_resource type="Texture2D" uid="uid://bvpuip4xko7l" path="res://tileset/oak_woods_tileset.png" id="4_j740i"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bb3n3es4i4tnv" path="res://ui/pause.tscn" id="7_4lfia"]
 [ext_resource type="Texture2D" uid="uid://btbqhq5jv8lpe" path="res://tileset/cave/Без_назви-1-removebg-preview.png" id="8_j740i"]
 [ext_resource type="PackedScene" uid="uid://c64kbql2g46kh" path="res://objects/portal/portal.tscn" id="9_qogpw"]
+[ext_resource type="AudioStream" uid="uid://di25iob6g0l4t" path="res://sounds/bgSounds/bird.wav" id="10_3sxgj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("2_4lfia")
@@ -11454,6 +11456,7 @@ tile_size = Vector2i(8, 8)
 sources/0 = SubResource("TileSetAtlasSource_3a0b2")
 
 [node name="main" type="Node2D" unique_id=584399974]
+script = ExtResource("1_x4yfu")
 
 [node name="Bg_OverWorld" parent="." unique_id=205067628 instance=ExtResource("1_3a0b2")]
 position = Vector2(-24.999998, 3.000002)
@@ -11468,9 +11471,9 @@ tile_map_data = PackedByteArray("AAAgAEIAAAAwACgAAAAgAEMAAAAwACkAAAAgAEQAAAAwACo
 tile_set = SubResource("TileSet_4lfia")
 
 [node name="player" parent="." unique_id=1147752908 instance=ExtResource("6_w4euq")]
-position = Vector2(440, 592)
+position = Vector2(440.00003, 592)
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=936199273]
+[node name="Camera2D2" type="Camera2D" parent="player" unique_id=936199273]
 zoom = Vector2(5, 5)
 
 [node name="Pause" parent="." unique_id=1132590377 instance=ExtResource("7_4lfia")]
@@ -11483,3 +11486,6 @@ texture = ExtResource("8_j740i")
 
 [node name="Portal" parent="." unique_id=1707442259 instance=ExtResource("9_qogpw")]
 position = Vector2(872, 623)
+
+[node name="musicplayer" type="AudioStreamPlayer" parent="." unique_id=1915833375]
+stream = ExtResource("10_3sxgj")

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://lledv0c52jok"]
 
 [ext_resource type="Script" uid="uid://qadxl6k4dtvk" path="res://ui/menu.gd" id="1_hl6vq"]
-[ext_resource type="PackedScene" uid="uid://d0jjcj7rew4ub" path="res://scence/background/bg.tscn" id="2_ouk20"]
+[ext_resource type="PackedScene" uid="uid://d0jjcj7rew4ub" path="res://scene/background/bg.tscn" id="2_ouk20"]
+[ext_resource type="AudioStream" uid="uid://dqel8iqoh6fp" path="res://sounds/bgSounds/ChillMenu.wav" id="3_4c782"]
 
 [node name="menu" type="Node2D" unique_id=1065712561]
 script = ExtResource("1_hl6vq")
@@ -60,5 +61,9 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Settings"
 
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2042924726]
+stream = ExtResource("3_4c782")
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
