@@ -14,6 +14,10 @@ config/name="dark-echoes"
 run/main_scene="uid://lledv0c52jok"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="uid://bui2i8uhp47un"
+
 [input]
 
 interact={
