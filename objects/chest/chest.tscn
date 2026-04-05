@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b31wc2bi2o3wl" path="res://objects/chest/sheetlist_48x32_smallchest_1.png" id="1_1frqu"]
 [ext_resource type="Script" uid="uid://b1iesvj0lwql4" path="res://objects/chest/chest.gd" id="1_8bq3i"]
-
+[ext_resource type="AudioStream" uid="uid://ckuxlqa24th1a" path="res://sounds/chest/chest-opening.wav" id="3_141al"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uwsg"]
 size = Vector2(21, 13)
@@ -93,3 +93,7 @@ frame_progress = 0.2573882
 texture_filter = 1
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_8bq3i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1353288287]
+stream = ExtResource("3_141al")
+bus = &"sfx"

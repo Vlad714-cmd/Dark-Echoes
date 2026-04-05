@@ -4,6 +4,7 @@ var player_nearby = false
 var is_open = false
 
 @onready var anim = $AnimatedSprite2D
+@onready var audio = $AudioStreamPlayer2D
 
 func _ready():
 	$Area2D.body_entered.connect(_on_body_entered)
@@ -23,4 +24,5 @@ func _on_body_exited(body):
 
 func open_chest():
 	is_open = true
-	anim.play("opening")  
+	anim.play("opening")
+	audio.play()

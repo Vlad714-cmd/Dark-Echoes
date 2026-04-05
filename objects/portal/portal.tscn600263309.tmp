@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5jyvhfhdepaf" path="res://objects/portal/PORTAL BLUE-Sheet.png" id="1_0r486"]
 [ext_resource type="Script" uid="uid://jp3j5e7lhia1" path="res://objects/portal/portal.gd" id="1_ef3v5"]
-[ext_resource type="AudioStream" uid="uid://djsr1x834kdao" path="res://sounds/portal/portal.wav" id="3_ah4id"]
+[ext_resource type="AudioStream" uid="uid://drhfdxnqje623" path="res://sounds/portal/portal.mp3" id="3_ah4id"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ef3v5"]
 height = 28.571436
