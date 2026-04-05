@@ -256,7 +256,7 @@ animation = &"run"
 autoplay = "idle"
 
 [node name="Hand" type="Node2D" parent="." unique_id=1757377391]
-position = Vector2(-4, 2)
+position = Vector2(-3.94737, 1.1904752)
 
 [node name="Sprite2D" type="Sprite2D" parent="Hand" unique_id=889650404]
 texture_filter = 1
