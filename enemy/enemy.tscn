@@ -3,14 +3,11 @@
 [ext_resource type="Script" uid="uid://dbd8y0430t1ei" path="res://enemy/enemy.gd" id="1_355ya"]
 [ext_resource type="Texture2D" uid="uid://d1ud88rkeh3jq" path="res://enemy/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="1_j6d7t"]
 [ext_resource type="Texture2D" uid="uid://cgo7vgm05jmr7" path="res://enemy/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="3_0p8j0"]
+[ext_resource type="AudioStream" uid="uid://d1dxuiev5gppp" path="res://sounds/skeleton/step.wav" id="4_p200p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_355ya"]
 atlas = ExtResource("1_j6d7t")
 region = Rect2(0, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0p8j0"]
-atlas = ExtResource("1_j6d7t")
-region = Rect2(96, 0, 96, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu7dk"]
 atlas = ExtResource("1_j6d7t")
@@ -35,10 +32,6 @@ region = Rect2(576, 0, 96, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_syyve"]
 atlas = ExtResource("1_j6d7t")
 region = Rect2(672, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jxbx5"]
-atlas = ExtResource("3_0p8j0")
-region = Rect2(0, 0, 96, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66tjb"]
 atlas = ExtResource("3_0p8j0")
@@ -83,9 +76,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_355ya")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0p8j0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_pu7dk")
 }, {
 "duration": 1.0,
@@ -103,14 +93,11 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_syyve")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jxbx5")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_66tjb")
 }, {
@@ -140,7 +127,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"walk",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_66tjb"]
@@ -158,8 +145,6 @@ scale = Vector2(0.3333333, 0.3600003)
 sprite_frames = SubResource("SpriteFrames_jxbx5")
 animation = &"walk"
 autoplay = "idle"
-frame = 9
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796173676]
 position = Vector2(0, 3)
@@ -173,5 +158,9 @@ collision_layer = 2
 position = Vector2(0, 1)
 scale = Vector2(5.440007, 2.639999)
 shape = SubResource("CircleShape2D_tlftc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1686607812]
+stream = ExtResource("4_p200p")
+bus = &"sfx"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
