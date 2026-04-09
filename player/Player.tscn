@@ -270,3 +270,6 @@ position = Vector2(15, -3)
 rotation = 3.1428063
 scale = Vector2(0.7128906, 0.28125)
 texture = ExtResource("4_fuoxf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=378113885]
+zoom = Vector2(5, 5)
