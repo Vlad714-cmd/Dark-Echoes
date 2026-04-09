@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 500.0
+@export var speed := 80.0
 @export var chase_speed := 100.0        
 @export var damage := 1
 @export var patrol_distance := 100.0
