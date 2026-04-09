@@ -136,6 +136,9 @@ height = 20.370358
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tlftc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p200p"]
+size = Vector2(27, 22)
+
 [node name="enemy" type="CharacterBody2D" unique_id=2127374005]
 script = ExtResource("1_355ya")
 
@@ -163,4 +166,11 @@ shape = SubResource("CircleShape2D_tlftc")
 stream = ExtResource("4_p200p")
 bus = &"sfx"
 
+[node name="hitbox" type="Area2D" parent="." unique_id=730594283]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=37656915]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_p200p")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

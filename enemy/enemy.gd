@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 80.0
+@export var speed := 500.0
 @export var chase_speed := 100.0        
 @export var damage := 1
 @export var patrol_distance := 100.0
@@ -88,3 +88,10 @@ func _handle_movement_sound() -> void:
 		else:
 			if sfx_ambient.playing:
 				sfx_ambient.stop()
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		if body.has_method("take_damage"):
+			body.take_damage(damage)
+			get_tree().change_scene_to_file("res://scene/Main.tscn")
