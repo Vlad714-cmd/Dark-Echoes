@@ -11473,9 +11473,6 @@ tile_set = SubResource("TileSet_4lfia")
 [node name="player" parent="." unique_id=1147752908 instance=ExtResource("6_w4euq")]
 position = Vector2(440.00003, 592)
 
-[node name="Camera2D2" type="Camera2D" parent="player" unique_id=936199273]
-zoom = Vector2(5, 5)
-
 [node name="Pause" parent="." unique_id=1132590377 instance=ExtResource("7_4lfia")]
 visible = false
 

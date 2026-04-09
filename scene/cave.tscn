@@ -3043,9 +3043,6 @@ position = Vector2(376, 2)
 [node name="player" parent="." unique_id=1147752908 instance=ExtResource("5_hkxy7")]
 position = Vector2(20, 5)
 
-[node name="Camera2D2" type="Camera2D" parent="player" unique_id=795986896]
-zoom = Vector2(5, 5)
-
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=761816971]
 stream = ExtResource("7_lbvpa")
 bus = &"sounds"
