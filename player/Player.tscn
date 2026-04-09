@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7vjxvjw66iuy" path="res://player/New Piskel (1).png" id="4_fuoxf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44cfe"]
+height = 26.190453
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dd465"]
 atlas = ExtResource("2_ghijl")
